@@ -1,6 +1,6 @@
 # CHIP-8 Emulator
 
-![CHIP-8 Emulator](https://github.com/daniilsjb/CHIP-8/tree/master/res)
+![CHIP-8 Emulator](https://github.com/daniilsjb/CHIP-8/tree/master/res/demo.gif)
 
 [CHIP-8](https://en.wikipedia.org/wiki/CHIP-8) is a virtual machine that was developed in the 1970s to allow programmers to write video games more easily. This project contains a functional emulator that can run programs written for the original CHIP-8, as well as provide some debugging facilities - users may pause execution at any time to inspect memory, or change the frequency at which the chip runs.
 
