@@ -25,6 +25,7 @@ To build this program, you need:
 * C99
 * [SDL2](https://www.libsdl.org/)
 * [CMake](https://cmake.org/)
+* [git](https://git-scm.com/)
 
 First, clone this project into a directory on your computer:
 
@@ -88,4 +89,4 @@ As for the key mappings, CHIP-8 uses a hexpad for input. The emulator provides v
 
 ## Enjoy
 
-Feel free to play around with the emulator and modify it however you wish!
+Feel free to play around with the emulator, study it, and modify it however you wish! If you have any feedback, feel free to contact me or open an issue.
