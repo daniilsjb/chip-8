@@ -4,11 +4,11 @@
 
 [CHIP-8](https://en.wikipedia.org/wiki/CHIP-8) is a virtual machine that was developed in the 1970s to allow programmers to write video games more easily. This project contains a functional emulator that can run programs written for the original CHIP-8, as well as provide some debugging facilities - users may pause execution at any time to inspect memory, or change the frequency at which the chip runs.
 
-The goal of this project is to be fun and educational. Although CHIP-8 is a fairly simple system to implement, it involves some fundamental concepts necessary for any emulation or virtualization. This particular implementation is written in C99 using [SDL2](https://www.libsdl.org/). The source code includes comments that try to explain various techniques used throughout emulation.
+This project was created over the course of a few days with the primary goal of being fun and educational. Although CHIP-8 is a fairly simple system to implement, it involves some fundamental concepts necessary for any emulation or virtualization. This particular implementation is written in C99 using [SDL2](https://www.libsdl.org/). I hope that other people will find it as interesting as I did, so I made an attempt to include comments that explain how the entire process works.
 
 ## Resources
 
-If you want to learn more about how CHIP-8 operates, the following resources were used in the development of this project:
+In the source code I do not explain in detail the system that is emulated. If you want to learn more about how CHIP-8 operates, the following resources were used in the development of this project:
 
 * <https://en.wikipedia.org/wiki/CHIP-8>
 * <http://devernay.free.fr/hacks/chip8/C8TECH10.HTM>
@@ -16,7 +16,7 @@ If you want to learn more about how CHIP-8 operates, the following resources wer
 
 ## Programs
 
-Plenty of programs have been written for CHIP-8, and many of them are available on the public domain. This repository includes some ROMs that were found [here](https://github.com/kripod/chip8-roms).
+Plenty of programs have been written for CHIP-8, and many of them are available on the public domain. This repository includes some ROMs that were found [here](https://github.com/kripod/chip8-roms). If you'd like to write a program of your own, refer to the resources above for the list of available instructions.
 
 ## Building
 
@@ -49,13 +49,17 @@ The above command assumes that `SDL2` is on your path. You may also explicitly s
 cmake .. -DSDL2_PATH="/path/to/sdl2"
 ```
 
-To run the executable, place the `SDL2` dynamic library file and the `res` folder into the same directory as your executable.
+To run the program, place the `SDL2` dynamic library file and the `res` folder into the same directory as your executable.
 
 ## Usage
 
-Once you start the emulator, it will execute a default ROM program. To load another program into it, you need to drag the ROM file onto the emulator window. It is expected that the file has `.ch8` extension.
+Once you start the emulator, it will execute a simple demonstration program. If you launch it from the command prompt, you have an option of specifying the path to another ROM to be loaded on start:
 
-Alternatively, you may run the emulator from command prompt, in which case you may specify the path to ROM to be loaded on start. You may still load another ROM at runtime by using drag-and-drop.
+```shell
+Chip8 "/path/to/rom"
+```
+
+While the emulator is running, you can also load another program into it by dragging the ROM file onto the emulator window. It is important to note that the emulator will only load ROM files that have `.ch8` extension to prevent users from accidentally loading invalid programs.
 
 ## Controls
 
@@ -72,7 +76,7 @@ The following controls are supported:
 | `Up/Down`         | Move memory cursor when paused
 | `Backspace`       | Load the default ROM
 
-As for the key mappings, CHIP-8 uses a hexpad for input. The emulator provides virtual key mappings to suit modern keyboard:
+As for the key mappings, CHIP-8 uses a hexpad for input. The emulator provides virtual key mappings to suit modern keyboards:
 
 ```txt
      CHIP-8                       Emulator
@@ -89,4 +93,4 @@ As for the key mappings, CHIP-8 uses a hexpad for input. The emulator provides v
 
 ## Enjoy
 
-Feel free to play around with the emulator, study it, and modify it however you wish! If you have any feedback, feel free to contact me or open an issue.
+Feel free to play around with the emulator, study it, and modify it however you wish! If you have any feedback, you can contact me or open an issue.
