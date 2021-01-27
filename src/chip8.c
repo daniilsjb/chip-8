@@ -126,7 +126,7 @@ void Chip8_UpdateKey(Chip8 *chip, uint8_t digit, bool pressed)
     
     // If waiting for input and the key has been pressed, write it into
     // the specified register
-    if (chip->key_reg <= NUM_REGISTERS && pressed) {
+    if (chip->key_reg < NUM_REGISTERS && pressed) {
         chip->V[chip->key_reg] = digit;
         chip->key_reg = 0xFF;
     }
@@ -190,7 +190,7 @@ static void fill(Chip8 *chip, uint16_t i);
 void Chip8_Step(Chip8 *chip)
 {
     // If key register is set, the chip is waiting for input
-    if (chip->key_reg <= NUM_REGISTERS) {
+    if (chip->key_reg < NUM_REGISTERS) {
         return;
     }
     
