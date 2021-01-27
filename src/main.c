@@ -8,15 +8,14 @@
 
 int main(int argc, char **argv)
 {
-    // Set the exit status of the program, assuming success by default
-    int status = EXIT_SUCCESS;
-    
     // Initialize the SDL library subsystems we're using
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_AUDIO) != 0) {
         fprintf(stderr, "SDL_Init Error: %s\n", SDL_GetError());
-        status = EXIT_FAILURE;
-        goto clean_up;
+        return EXIT_FAILURE;
     }
+
+    // Set the exit status of the program, assuming success by default
+    int status = EXIT_SUCCESS;
 
     // We're using the standard random number generator based on the program start-up time
     srand(time(NULL));

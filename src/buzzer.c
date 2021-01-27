@@ -46,6 +46,10 @@ bool Buzzer_Init(Buzzer *buzzer)
 
 void Buzzer_Free(Buzzer *buzzer)
 {
+    if (buzzer == NULL) {
+        return;
+    }
+    
     free(buzzer->buffer);
     
     if (buzzer->device) {

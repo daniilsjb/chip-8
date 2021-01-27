@@ -67,6 +67,10 @@ bool InitFont(Chip8 *chip)
 
 void Chip8_Free(Chip8 *chip)
 {
+    if (chip == NULL) {
+        return;
+    }
+    
     free(chip->ram);
 }
 

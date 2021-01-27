@@ -82,6 +82,10 @@ bool TimingInit(Emulator *emulator)
 
 void Emulator_Free(Emulator *emulator)
 {
+    if (emulator == NULL) {
+        return;
+    }
+    
     free(emulator->rom);
     
     Screen_Free(&emulator->screen);

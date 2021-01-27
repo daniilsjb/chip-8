@@ -109,6 +109,10 @@ static bool CursorInit(Screen *screen)
 
 void Screen_Free(Screen *screen)
 {
+    if (screen == NULL) {
+        return;
+    }
+    
     if (screen->video) {
         SDL_DestroyTexture(screen->video);
     }
