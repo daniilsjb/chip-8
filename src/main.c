@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     // We're using the standard random number generator based on the program start-up time
     srand(time(NULL));
 
-    // Create an initialize the emulator
+    // Create and initialize the emulator
     Emulator emulator;
     if (!Emulator_Init(&emulator)) {
         status = EXIT_FAILURE;
