@@ -180,7 +180,7 @@ static bool LoadRom(Emulator *emulator, const char *path)
     // "crashing" the emulator in case they try to upload a file of wrong
     // type (such as .png), we expect the ROM to have a certain extension.
     // If something goes wrong, an indicating bell sound should get played.
-    char* extension = strchr(path, '.');
+    char *extension = strchr(path, '.');
     if (!extension || strcmp(extension, ".ch8") != 0) {
         fprintf(stderr, "ROM files should have '.ch8' extension\a\n");
         return false;
