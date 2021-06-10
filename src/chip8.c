@@ -150,7 +150,7 @@ void Chip8_UpdateTimers(Chip8 *chip)
 #define X(i)   (((i) & 0x0F00) >> 8)
 #define Y(i)   (((i) & 0x00F0) >> 4)
 
-// Forward declarations of every opcode's function. Opcode names are original,
+// Forward declarations of every opcode's function. Opcode names are made-up,
 // but an attempt was made to be authentic to assembly mnemonics.
 static void cls(Chip8 *chip, uint16_t i);
 static void ret(Chip8 *chip, uint16_t i);
