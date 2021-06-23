@@ -4,6 +4,11 @@ cmake_minimum_required(VERSION 3.18)
 # Create the project
 project(Chip8 LANGUAGES C)
 
+# Request specific C standard for all targets
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_EXTENSIONS OFF)
+
 # Add the main executable
 add_executable(Chip8
     "src/main.c"
