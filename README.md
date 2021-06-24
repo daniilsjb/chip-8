@@ -61,6 +61,8 @@ Chip8 "/path/to/rom"
 
 While the emulator is running, you can also load another program into it by dragging the ROM file onto the emulator window. It is important to note that the emulator will only load ROM files that have `.ch8` extension to prevent users from accidentally loading invalid programs.
 
+Note that I have only tested this project on Windows. While it is generally cross-platform, some features (such as drag-and-drop events) may require additional tweaks on other platforms.
+
 ## Controls
 
 The following controls are supported:
