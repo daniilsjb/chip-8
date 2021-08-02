@@ -30,8 +30,8 @@ To build this program, you need:
 First, clone this project into a directory on your computer:
 
 ```shell
-git clone https://github.com/daniilsjb/CHIP-8.git
-cd CHIP-8
+git clone https://github.com/daniilsjb/chip-8.git
+cd chip-8
 ```
 
 Second, run CMake to configure and build the program:
